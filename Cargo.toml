@@ -1,13 +1,13 @@
 [package]
 name = "yt-hello-world"
-version = "0.9.11"
+version = "0.9.12"
 authors = ["Yarek T <yarekt@gmail.com>"]
 description = "Hello world"
-repository = "https://github.com/YarekTyshchenko/hello-world"
+repository = "https://github.com/YarekTyshchenko/tarpaulin"
 license = "MIT"
 
 [package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/{ version }/hello-world-{ target }{ archive-suffix }"
+pkg-url = "{ repo }/releases/download/{ version }/yt-hello-world-{ target }{ archive-suffix }"
 bin-dir = "hello-world{ binary-ext }"
 pkg-fmt = "tgz"
 
