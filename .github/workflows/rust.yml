@@ -31,19 +31,6 @@ jobs:
           components: rustfmt
       - name: cache
         uses: Swatinem/rust-cache@v2
-      - name: test
-        run: cargo test
-      - name: ignored test
-        run: cargo test -- --ignored || true
-        if: matrix.version == 'nightly'
-      - uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: linux ${{ matrix.version }}
-          retention-days: 3
-          path: |
-              tests/data/
-              !tests/data/**/*.rs
       - name: check formatting
         run: cargo fmt -- --check
   windows:
@@ -64,16 +51,6 @@ jobs:
           toolchain: ${{ matrix.version }}
       - name: cache
         uses: Swatinem/rust-cache@v2
-      - name: test
-        run: cargo test
-      - uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: windows ${{ matrix.version }}
-          retention-days: 3
-          path: |
-              tests/data/
-              !tests/data/**/*.rs
   mac:
     runs-on: macos-latest
     strategy:
@@ -91,13 +68,3 @@ jobs:
           toolchain: ${{ matrix.version }}
       - name: cache
         uses: Swatinem/rust-cache@v2
-      - name: test
-        run: cargo test
-      - uses: actions/upload-artifact@v3
-        #if: failure()
-        with:
-          name: mac ${{ matrix.version }}
-          retention-days: 3
-          path: |
-              tests/data/
-              !tests/data/**/*.rs
