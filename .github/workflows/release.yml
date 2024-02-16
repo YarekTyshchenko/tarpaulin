@@ -110,7 +110,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
-          bin: cargo-tarpaulin
+          bin: yt-hello-world
           target: ${{ matrix.target }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
