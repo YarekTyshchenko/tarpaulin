@@ -1,7 +1,0 @@
-[coverage]
-features = "feature1"
-force_clean = false
-
-[coverage_2]
-features = "feature2"
-force_clean = false
