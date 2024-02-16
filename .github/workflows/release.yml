@@ -2,11 +2,7 @@ name: Release
 
 on:
   push:
-    # TODO: Remove this
-    branches:
-      - "binstall-signing"
     tags:
-      - 'v1.*'
       - '[0-9]+.*'
 jobs:
   keygen:
