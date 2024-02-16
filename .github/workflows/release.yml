@@ -116,6 +116,5 @@ jobs:
         with:
           bin: cargo-tarpaulin
           target: ${{ matrix.target }}
-          features: vendored-openssl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
