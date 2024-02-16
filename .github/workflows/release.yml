@@ -80,7 +80,7 @@ jobs:
         env:
           AGE_KEY_SECRET: ${{ secrets.AGE_KEY_SECRET }}
         shell: bash
-        run: .github/scripts/ephemeral-sign.sh target/package/cargo-tarpaulin-*.crate
+        run: .github/scripts/ephemeral-sign.sh target/package/yt-hello-world-*.crate
 
       - name: Publish package to crates
         run: cargo publish --allow-dirty --token ${{ secrets.CARGO_TOKEN }}
